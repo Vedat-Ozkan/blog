@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
+
   Post.find({}, function (err, posts) {
     res.render("home", {
       homeStartingContent: homeStartingContent,
